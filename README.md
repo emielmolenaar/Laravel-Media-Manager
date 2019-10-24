@@ -199,8 +199,6 @@
 [modal]: https://github.com/ctf0/Laravel-Media-Manager/wiki/Use-The-Manager-From-A-Modal
 [showPreview]: https://github.com/ctf0/Laravel-Media-Manager/blob/master/src/config/mediaManager.php#L126
 
-<br>
-
 ## Config
 - **config/mediaManager.php**
 
@@ -300,28 +298,18 @@
         * preview and remove files b4 uploading
         */
         'preview_files_before_upload' => true,
+  
+        /*
+         * Database connection (defaults to "mediamanager")
+         */
+        'database_connection' => 'mediamanager',
+      
+        /*
+         * Locked items table name (defaults to "locked")
+         */
+        'table_locked' => 'locked'
     ];
     ```
-
-- **config/database.php**
-
-    ```php
-    'connections' => [
-        // ...
-
-        'mediamanager' => [
-            'driver'   => 'mysql', // or whatever you want
-            'database' => env('DB_DATABASE'), // or database_path('MediaManager.sqlite')
-            'host'     => env('DB_HOST'),
-            'port'     => env('DB_PORT'),
-            'username' => env('DB_USERNAME'),
-            'password' => env('DB_PASSWORD'),
-        ]
-    ]
-    ```
-
-<br>
-
 ## Usage
 
 > [Wiki](https://github.com/ctf0/Laravel-Media-Manager/wiki)<br>
